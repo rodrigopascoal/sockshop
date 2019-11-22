@@ -1,4 +1,3 @@
----
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -16,6 +15,6 @@ spec:
   - route:
     - destination:
         host: carts-canary.sockshop-production.svc.cluster.local
+      weight: 100
     - destination:
         host: carts-primary.sockshop-production.svc.cluster.local
-      weight: 100
